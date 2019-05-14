@@ -1,0 +1,24 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewreport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" href="{% static 'icon/logo.png' %}" type="image">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/paa.css' %}">
+    <script type="text/javascript" src="{% static 'js/slider.js' %}"></script>
+    <title>Flw</title>
+  </head>
+  <body>
+    {% include 'partials/_topbar.html' %}
+    {% include 'partials/_navbar.html' %}
+
+
+    {% block content %} {% endblock %}
+
+    {% include 'partials/_footer.html' %}
+
+  </body>
+</html>

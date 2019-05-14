@@ -1,0 +1,12 @@
+{% load static %}
+<div id="navbar">
+ <a href="login.html">Logout</a>
+ <a href="contak.html">Contact Us</a>
+ <a href="vid.html">Videos</a>
+ <a {% if 'products' in request.path %}
+ class="active" {% else %} class=""
+ {% endif %} href="{% url 'products' %}">Products</a>
+ <a {% if '/' == request.path %}
+ class="active" {% else %} class=""
+ {% endif %} href="{% url 'index' %}">Home</a>
+</div>
